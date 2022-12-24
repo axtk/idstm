@@ -1,6 +1,6 @@
 # idstm
 
-***I**mmutable **d**ata **st**ore with a **m**utable interface for React apps*
+*<ins>I</ins>mmutable <ins>d</ins>ata <ins>st</ins>ore with a <ins>m</ins>utable interface for React apps*
 
 - Wrap up shared data into `new Store(data)`, put it into a React Context;
 - Read and subscribe to updates in the store via `const [state, setState] = useStore(store);`
