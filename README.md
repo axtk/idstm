@@ -2,10 +2,19 @@
 
 *<ins>I</ins>mmutable <ins>d</ins>ata <ins>st</ins>ore with a <ins>m</ins>utable interface for React apps*
 
-- Wrap up shared data into `new Store(data)`, put it into a React Context;
-- Read and subscribe to updates in the store via `const [state, setState] = useStore(store);`
-- Update the shared data via the mutable interface of `setState(draftState => { draftState.x += 10; });`
-- Have as many stores as needed.
+🔹 Wrap up shared data into `new Store(data)`, put it into a React Context;
+
+🔹 Read and subscribe to updates in the store:
+```js
+const [state, setState] = useStore(store);
+```
+
+🔹 Update the immutable store state via the mutable interface of `setState()`:
+```js
+setState(draftState => { draftState.x += 5; });
+```
+
+🔹 Have as many stores as needed.
 
 See also [*idst*](https://www.npmjs.com/package/idst).
 
