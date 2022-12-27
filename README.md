@@ -9,6 +9,8 @@
 const [state, setState] = useStore(store);
 ```
 
+Call `useStore(store, false)` to get `[state, setState]` without subscribing to updates in the store.
+
 🔹 Update the immutable store state via the mutable interface of `setState()`:
 ```js
 setState(draftState => { draftState.x += 5; });
@@ -16,7 +18,7 @@ setState(draftState => { draftState.x += 5; });
 
 🔹 Have as many stores as needed.
 
-See also [*idst*](https://www.npmjs.com/package/idst).
+See also [*idst*](https://www.npmjs.com/package/idst), an immutable store without the mutable interface of `setState()`.
 
 ## Example
 
