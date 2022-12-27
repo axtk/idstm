@@ -22,6 +22,8 @@ See also [*idst*](https://www.npmjs.com/package/idst), an immutable store withou
 
 ## Example
 
+([live](https://codesandbox.io/s/npu6rb))
+
 ```jsx
 import {createContext} from 'react';
 import {Store} from 'idstm';
