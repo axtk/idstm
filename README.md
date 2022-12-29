@@ -2,7 +2,7 @@
 
 *<ins>I</ins>mmutable <ins>d</ins>ata <ins>st</ins>ore with a <ins>m</ins>utable interface for React apps*
 
-### Purpose
+## Purpose
 
 Using data shared across React components in a simple way similar to React's `useState()`.
 
