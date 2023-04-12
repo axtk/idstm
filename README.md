@@ -4,32 +4,24 @@
 
 ## Purpose
 
-Using data shared across React components in a simple way similar to React's `useState()`.
+Sharing data across React components in a simple way similar to React's `useState()`.
 
 ## Usage
 
-🔹 Wrap up shared data into `new Store(data)` imported from this package, put it into a React Context;
-
-🔹 Read and subscribe to updates in the store:
-
 ```js
-import {useStore} from 'idstm';
-
-let [state, setState] = useStore(store);
+import {Store, useStore} from 'idstm';
 ```
 
-Call `useStore(store, false)` to get `[state, setState]` without subscribing to updates in the store.
+- Wrap up shared data into `new Store(data)`, put it into a React Context;
 
-🔹 Update the immutable store state via the mutable interface of `setState()`:
+- Pick the store from the context with the React's `useContext()` hook from within a component;
 
-```js
-setState(draftState => { draftState.x += 5; });
-```
+- Read the store state and subscribe to its updates: `let [state, setState] = useStore(store);` Alternatively, use `let [state, setState] = useStore(store, false);` (with the hook's second parameter) to turn off the subscription to store state updates;
 
-🔹 Have as many stores as needed.
+- Update the immutable store state via the mutable interface of `setState()`: `setState(draftState => { draftState.x += 5; });`
 
----
+- Have as many stores as needed.
 
-[Live example](https://codesandbox.io/s/npu6rb)
+[Live demo](https://codesandbox.io/s/npu6rb)
 
 See also [*idst*](https://www.npmjs.com/package/idst), an immutable store without the mutable interface of `setState()`.
